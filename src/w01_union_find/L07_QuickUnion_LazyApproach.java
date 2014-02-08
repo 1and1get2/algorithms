@@ -19,4 +19,8 @@ public class L07_QuickUnion_LazyApproach {
 	public void union(int p, int q){
 		id[root(p)] = id[root(q)];
 	}
+	
+	public int[] getResult(){
+		return id;
+	}
 }
