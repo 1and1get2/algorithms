@@ -1,4 +1,4 @@
-package L06_quickFindUF;
+package w01_union_find;
 
 public class L06_QuickFindUF {
 	private static int N = 25;
