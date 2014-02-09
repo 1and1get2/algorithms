@@ -2,6 +2,16 @@ package w01_union_find;
 
 import java.util.Arrays;
 
+/**
+ * 	weighted: maintain another array to record the weight of every branch, and 
+ * 	and always attach the lighter on to the heavier one.
+ * 
+ * 	compressed: move all the child to the root
+ * 
+ * 	conclusion: I'm just too lazy to implement them in code.
+ * 
+ * */
+
 public class L08_QuickUnion_LazyApproach_weighted {
 	private static int N = 25;
 	private int numbers;
