@@ -12,17 +12,25 @@ public class L03_LinkedQueueOfString implements L00_Queue {
 	public boolean isEmpty() {
 		return first == null;
 	}
-
+	
+	//TODO: understand
 	@Override
 	public void enqueue(String t) {
-		// TODO Auto-generated method stub
-		
+		Node oldLast = last; 
+		last = new Node();
+		last.item = t;
+		last.next = null;
+		if (isEmpty()) first = last;
+		else oldLast.next = last;
 	}
 
 	@Override
 	public String dequeue() {
-		// TODO Auto-generated method stub
-		return null;
+		String item = first.item;
+		first = first.next;
+		//
+		if (isEmpty()) last = null;
+		return item;
 	}
 
 	
