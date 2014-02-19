@@ -6,9 +6,9 @@ public class L02_StackOfString_Array_FixedCapacity implements L00_Stack_Queues{
 	private int N = 0;
 
 	
-	public L02_StackOfString_Array_FixedCapacity(int capacity) {
+	public L02_StackOfString_Array_FixedCapacity() {
 		super();
-		s = new String[capacity];
+		s = new String[1];
 	}
 
 	@Override
@@ -18,7 +18,17 @@ public class L02_StackOfString_Array_FixedCapacity implements L00_Stack_Queues{
 
 	@Override
 	public void push(String t) {
+		if (N == s.length) resize(2 * s.length); 
 		s[N++] = t;
+	}
+	
+	private void resize(int capacity){
+		String[] copy = new String[capacity];
+//		for (int i = 0; i < N; i++){
+//			copy[i] = s[i];
+//		}
+		System.arraycopy(s, 0, s, 0, N);
+		s = copy;
 	}
 
 	
@@ -32,6 +42,7 @@ public class L02_StackOfString_Array_FixedCapacity implements L00_Stack_Queues{
 	public String pop() {
 		String item = s[--N];
 		s[N] = null;
+		if (N > 0 && N == s.length / 4) resize(s.length/2);
 		return item;
 	}
 
