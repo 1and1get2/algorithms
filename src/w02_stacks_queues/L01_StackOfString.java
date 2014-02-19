@@ -1,6 +1,6 @@
 package w02_stacks_queues;
 
-public class L01_StackOfString implements L00_Stack_Queues{
+public class L01_StackOfString implements L00_Stack{
 	private Node first = null;
 	
 	private class Node{

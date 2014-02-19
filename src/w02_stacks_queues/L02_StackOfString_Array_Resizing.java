@@ -1,6 +1,6 @@
 package w02_stacks_queues;
 
-public class L02_StackOfString_Array_Resizing implements L00_Stack_Queues{
+public class L02_StackOfString_Array_Resizing implements L00_Stack{
 	
 	private String[] s;
 	private int N = 0;
