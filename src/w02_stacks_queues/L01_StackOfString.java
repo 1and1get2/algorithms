@@ -1,6 +1,6 @@
 package w02_stacks_queues;
 
-public class L01_StackOfString implements L00_Stack{
+public class L01_StackOfString extends L00_Stack{
 	private Node first = null;
 	
 	private class Node{
@@ -12,7 +12,7 @@ public class L01_StackOfString implements L00_Stack{
 		return first == null;
 	}
 
-	@Override
+//	@Override
 	public void push(String t) {
 		// TODO Auto-generated method stub
 		Node oldFirst = first;
@@ -27,6 +27,12 @@ public class L01_StackOfString implements L00_Stack{
 		String oldFirstStr = first.item;
 		first = first.next;
 		return oldFirstStr;
+	}
+
+	@Override
+	public void push(Object t) {
+		// TODO Auto-generated method stub
+		
 	}
 
 

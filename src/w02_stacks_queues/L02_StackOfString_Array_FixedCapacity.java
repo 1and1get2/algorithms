@@ -1,6 +1,6 @@
 package w02_stacks_queues;
 
-public class L02_StackOfString_Array_FixedCapacity implements L00_Stack{
+public class L02_StackOfString_Array_FixedCapacity extends L00_Stack{
 	
 	private String[] s;
 	private int N = 0;
@@ -16,7 +16,6 @@ public class L02_StackOfString_Array_FixedCapacity implements L00_Stack{
 		return N == 0;
 	}
 
-	@Override
 	public void push(String t) {
 		if (N == s.length) resize(2 * s.length); 
 		s[N++] = t;
@@ -44,6 +43,12 @@ public class L02_StackOfString_Array_FixedCapacity implements L00_Stack{
 		s[N] = null;
 		if (N > 0 && N == s.length / 4) resize(s.length/2);
 		return item;
+	}
+
+	@Override
+	public void push(Object t) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

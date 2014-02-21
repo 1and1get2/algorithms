@@ -1,6 +1,6 @@
 package w02_stacks_queues;
 
-public class L02_StackOfString_Array_Resizing implements L00_Stack{
+public class L02_StackOfString_Array_Resizing extends L00_Stack{
 	
 	private String[] s;
 	private int N = 0;
@@ -16,7 +16,7 @@ public class L02_StackOfString_Array_Resizing implements L00_Stack{
 		return N == 0;
 	}
 
-	@Override
+//	@Override
 	public void push(String t) {
 		s[N++] = t;
 	}
@@ -33,6 +33,12 @@ public class L02_StackOfString_Array_Resizing implements L00_Stack{
 		String item = s[--N];
 		s[N] = null;
 		return item;
+	}
+
+	@Override
+	public void push(Object t) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }
